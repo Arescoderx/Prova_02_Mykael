@@ -5,6 +5,7 @@ package com.mycompany.exercicio_12_prova;
 
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -17,8 +18,7 @@ public class Exercicio_12_Prova {
         String ler = "";
         DataInputStream dado = new DataInputStream(System.in);
 
-
-        int vetor[] = new int[11];
+        int vetor[] = new int[10];
 
         for (int i = 0; i < 10; i++) {
             System.out.println("Digite o numero:" + (i + 1));
@@ -26,7 +26,7 @@ public class Exercicio_12_Prova {
             vetor[i] = Integer.parseInt(ler);
         }
 
-        for (int i = 10; i > 0; i--) {
+        for (int i = 9; i > 0; i--) {
 
             for (int j = 0; j < i; j++) {
 
@@ -45,7 +45,14 @@ public class Exercicio_12_Prova {
         for (int i = 0; i < 10; i++) {
 
             System.out.println(vetor[i]);
+        }
 
+        System.out.println("Digite outro numero:");
+        ler = dado.readLine();
+        int num = Integer.parseInt(ler);
+        
+        for (int i = 0; i < 9; i++) {
+            
         }
     }
 }

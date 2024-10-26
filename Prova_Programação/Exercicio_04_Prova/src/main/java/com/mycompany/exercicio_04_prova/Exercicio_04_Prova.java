@@ -5,6 +5,7 @@
 package com.mycompany.exercicio_04_prova;
 
 import java.io.DataInputStream;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,13 +14,17 @@ import javax.swing.JOptionPane;
  */
 public class Exercicio_04_Prova {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        String ler = "";
+        DataInputStream dado = new DataInputStream(System.in);
+        System.out.println("Digite um numero para saber seu sucessor e antecessor:");
+        ler = dado.readLine();
+        int num = Integer.parseInt(ler);
         
-        String dado = "Digite um numero para saber seu sucessor e antecessor:";
-        int num = 0;
+        String mensagem = (num-1)+"Seu Antecessor\n";
+        mensagem += (num+1)+"Seu Sucessor";
         
-        JOptionPane.showInputDialog(null, dado, dado, num);
         
-        JOptionPane.showMessageDialog(null,num);
+        JOptionPane.showMessageDialog(null,mensagem);
     }
 }
